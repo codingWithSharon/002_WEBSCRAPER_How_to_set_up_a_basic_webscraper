@@ -1,0 +1,59 @@
+Asahi Linux Progress Linux 7.0
+asahilinux.org
+Statecharts: hierarchical state machines
+statecharts.dev
+Amateur armed with ChatGPT solves an Erdős problem
+scientificamerican.com
+Why has there been so little progress on Alzheimer's disease?
+freakonomics.com
+Show HN: Turning a Gaussian Splat into a videogame
+playcanvas.com
+The West forgot how to make things, now it’s forgetting how to code
+techtrenches.dev
+At least 10 people tied to sensitive US research have died or disappeared
+cnn.com
+USB Cheat Sheet (2022)
+fabiensanglard.net
+Tell HN: An app is silently installing itself on my iPhone every day
+GnuPG – post-quantum crypto landing in mainline
+gnupg.org
+Cheating at Tetris
+chalkdustmagazine.com
+Exposing Floating Point – Bartosz Ciechanowski (2019)
+ciechanow.ski
+Mahjong: A Visual Guide
+themahjong.guide
+My .config Ship of Theseus
+shift1w.com
+OpenAI Privacy Filter
+openai.com
+Flickr: The first and last great photo platform
+petapixel.com
+Terra API (YC W21) Hiring: Applied AI Strategist(Health Intelligence)
+ycombinator.com
+The Free Universal Construction Kit
+fffff.at
+The route from Prussian military headquarters to Gary Gygax’s basement
+asteriskmag.com
+Using coding assistance tools to revive projects you never were going to finish
+matthewbrunelle.com
+Quirks of Human Anatomy
+sdbonline.org
+I spent 6 years building my Kanban as I hated how managers run the boards
+npmjs.com
+APL is more French than English
+jsoftware.com
+Mine, a Coalton and Common Lisp IDE
+coalton-lang.github.io
+EU Age Control: The trojan horse for digital IDs
+bednar.io
+The Joy of Folding Bikes
+korny.info
+Eden AI – European Alternative to OpenRouter
+edenai.co
+America's Geothermal Breakthrough
+oilprice.com
+Math Is Hard – OpenBSD Stories
+online.fr
+The Super Nintendo Cartridges (2024)
+fabiensanglard.net
