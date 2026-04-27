@@ -4,6 +4,10 @@
 
 If you have followed the previous project 001_AT_How_to_set_up_a_test_automation_project than you know how to find locators and use them. For webscraping locators are just as important so if you haven't yet looked at the previous project in this series I strongly recommend that you do.
 
+### Difference bewteen automation testing and scraping
+
+Test automation verifies expected behavior on controlled environments; web scraping extracts unknown data from unpredictable live sites. Testing uses assertions and fixed flows; scraping handles missing data, infinite pagination, and adds delays to be polite. Testing asks "does it work?" — scraping asks "what can I get?"
+
 ## What you will learn
 
 In this roject you will learn what a webscraper is and how to set one up. In this project we will use Playwright with Python.
@@ -236,4 +240,5 @@ When a project grows, we need good architecture to keep the project readable and
     - https://httpbin.org/
     - https://news.ycombinator.com/
     - https://nl.indeed.com/ 
+
 
