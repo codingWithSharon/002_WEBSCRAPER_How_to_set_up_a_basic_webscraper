@@ -92,8 +92,11 @@ import os
 def scrape_all_books():
     url = "https://books.toscrape.com/"
     
+    # ensure DataStorage exists (same as your other scraper)
+    os.makedirs("DataStorage", exist_ok=True)
+    
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)   # Set to True when you're done testing
+        browser = p.chromium.launch(headless=False)
         page = browser.new_page()
         
         page.goto(url, wait_until="networkidle")
@@ -112,7 +115,6 @@ def scrape_all_books():
                     title = book.locator("h3 a").get_attribute("title")
                     price = book.locator(".price_color").inner_text()
                     
-                    # Rating (e.g. "Three", "Four", etc.)
                     rating_class = book.locator(".star-rating").get_attribute("class")
                     rating = rating_class.replace("star-rating", "").strip() if rating_class else "N/A"
                     
@@ -131,35 +133,34 @@ def scrape_all_books():
                 except Exception as e:
                     print(f"Error on page {page_number}: {e}")
             
-            # Check for Next button
             next_button = page.locator("li.next a")
             
             if next_button.count() == 0:
                 print("No more 'Next' button found. Scraping completed!")
                 break
             
-            # Go to next page
             next_button.click()
             page.wait_for_load_state("networkidle")
-            time.sleep(1.5)   # Be polite to the server
+            time.sleep(1.5)
             
             page_number += 1
         
         browser.close()
         
-        # === Save to existing DataStorage folder ===
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # ✅ FIXED timestamp format (matches your quotes scraper)
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         filename = f"books_all_pages_{timestamp}.csv"
-        
-        # Use the existing DataStorage folder
         filepath = os.path.join("DataStorage", filename)
         
         with open(filepath, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["Title", "Price", "Rating", "Availability", "Product_Link"])
+            writer = csv.DictWriter(
+                f,
+                fieldnames=["Title", "Price", "Rating", "Availability", "Product_Link"]
+            )
             writer.writeheader()
             writer.writerows(all_books)
         
-        print(f"\n Scraping finished successfully!")
+        print(f"\nScraping finished successfully!")
         print(f"Total books scraped: {len(all_books)}")
         print(f"File saved: {filepath}")
 
