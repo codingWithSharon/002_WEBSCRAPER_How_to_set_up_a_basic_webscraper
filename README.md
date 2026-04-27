@@ -218,7 +218,29 @@ os.makedirs("DataStorage", exist_ok=True)
 
 ## Architecture
 
-When a project grows, we need good architecture to keep the project readable and maintainable. So before we move on with building the project further we need to now decide the route we
+When a project grows, we need good architecture to keep the project readable and maintainable. So before we move on with building the project further we need to now decide the route we are gonna take.
+
+Structure:
+
+DataStorage
+    books_20260427
+    books_all_pages_20260407
+    news_20260407
+    titles_20260427
+Scrapers
+    A_Beginner_static_simple_structure
+        booksToScrape.py
+        qoutesToScrape.py
+    B_Intermediate_dynamic_jsHeavy
+        Sample1.py
+    C_Advanced_real_world
+        Sample2.py
+Tutorials
+    Tutorial1.py
+    Tutorial2.py
+    Tutorial3.py
+venv
+README.md
 
 ## Pitfalls
 
