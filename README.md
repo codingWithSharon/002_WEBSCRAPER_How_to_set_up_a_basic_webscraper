@@ -241,4 +241,6 @@ When a project grows, we need good architecture to keep the project readable and
     - https://news.ycombinator.com/
     - https://nl.indeed.com/ 
 
+### Extra tools and libraries
 
+    - https://www.scrapy.org/
