@@ -2,15 +2,15 @@
 
 ## Introduction
 
-If you have followed the previous project 001_AT_How_to_set_up_a_test_automation_project than you know how to find locators and use them. For webscraping locators are just as important so if you haven't yet looked at the previous project in this series I strongly recommend that you do.
+If you have followed the previous project 001_AT_How_to_set_up_a_test_automation_project then you know how to find locators and use them. For webscraping locators are just as important so if you haven't yet looked at the previous project in this series I strongly recommend that you do.
 
-### Difference bewteen automation testing and scraping
+### Difference between automation testing and scraping
 
 Test automation verifies expected behavior on controlled environments; web scraping extracts unknown data from unpredictable live sites. Testing uses assertions and fixed flows; scraping handles missing data, infinite pagination, and adds delays to be polite. Testing asks "does it work?" — scraping asks "what can I get?"
 
 ## What you will learn
 
-In this roject you will learn what a webscraper is and how to set one up. In this project we will use Playwright with Python.
+In this project you will learn what a webscraper is and how to set one up. In this project we will use Playwright with Python.
 
 ## What is a webscraper?
 
@@ -26,14 +26,14 @@ What the webscraper does:
 
 ### Step 1 Create a folder and name it as you please
 ### Step 2 Open the folder in with VS Code
-### Step 3 Install the following using te termnial commands as shown below:
+### Step 3 Install the following using te terminal commands as shown below:
 
     - python --version
     - python -m venv venv
     - pip install playwright (installs packages)
-    - Playwright install (insalls browsers)
+    - Playwright install (installs browsers)
 
-### Step 4 Create a file calles "test1_basic_pagTitle_scraper.py"
+### Step 4 Create a file and name it "test1_basic_pageTitle_scraper.py"
 ### Step 5 Paste the following in that file:
 
     from playwright.sync_api import sync_playwright
@@ -45,11 +45,11 @@ What the webscraper does:
         print(page.title())
         browser.close()
 
-### Step 6 Run the script by using the command "python test1_basic_pagTitle_scraper.py" 
+### Step 6 Run the script by using the command "python test1_basic_pageTitle_scraper.py" 
 
     We expect the page title to be printed in the terminal. If this happens you know that you got a working setup.
 
-### Step 7 Create a second file called "test2_basic_titles_scraper_savingToText.py.py"
+### Step 7 Create a second file called "test2_basic_titles_scraper_savingToText.py"
 
     Paste the following script in the file:
 
@@ -170,7 +170,7 @@ os.makedirs("DataStorage", exist_ok=True)
 
 ### Step 11 Interactions
 
-    To create a more powerfull script you want to interact with the page elements, just like in an automated E2E test. Create a file and name it "test5_basicInteractiond_scraper.py" and paste the following in the file:
+    To create a more powerful script you want to interact with the page elements, just like in an automated E2E test. Create a file and name it "test5_basicInteractions_scraper.py" and paste the following in the file:
 
     from playwright.sync_api import sync_playwright
 
