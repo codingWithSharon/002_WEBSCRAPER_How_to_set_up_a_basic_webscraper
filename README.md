@@ -204,10 +204,13 @@ os.makedirs("DataStorage", exist_ok=True)
 ## Step 13 Stage ALL changes
     Enter command "git add ." or if you just want to stage a specific file use command like this "git add filename.py"
 ## Step 14 Commit changes
-    Enter command
+    Enter command "git commit -m "Initial commit message""
 ## Step 15 Push changes
-    Enter command
-
+    Enter command "git push origin main"
+## Step 16 Publish (decide private or public) to your github
+    Enter command git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+## Step 17 Create a branch
+    You should create a branch where you can work from. If you want to move back to the main branch use the following command "git checkout main" and when you want to check out your feature branch again use the same command but then selecting your branchname "git checkout feature/building_A_Real_Webscraper"
 
 ## Architecture
 
@@ -220,4 +223,17 @@ When a project grows, we need good architecture to keep the project readable and
     - Selector returns empty list > wrong CSS selector
     - Page loads slowly > need wait_for_selector
     - Dynamic sites > need scrolling/clicking
+
+## Links
+
+### Great websites to practice scraping
+
+    - https://books.toscrape.com/
+    - https://quotes.toscrape.com/
+    - https://www.scrapethissite.com/pages/
+    - https://quotes.toscrape.com/login
+    - https://webscraper.io/test-sites/e-commerce/allinone
+    - https://httpbin.org/
+    - https://news.ycombinator.com/
+    - https://nl.indeed.com/ 
 
