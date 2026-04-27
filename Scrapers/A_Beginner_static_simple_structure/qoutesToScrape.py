@@ -1,8 +1,15 @@
 import csv
 from datetime import datetime
 from playwright.sync_api import sync_playwright
-import time
 import os
+
+# create DataStorage folder if it doesn't exist
+folder_path = "DataStorage"
+os.makedirs(folder_path, exist_ok=True)
+
+# create timestamped filename
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+file_path = os.path.join(folder_path, f"quotes_{timestamp}.csv")
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
@@ -18,6 +25,7 @@ with sync_playwright() as p:
         for quote in quotes:
             text = quote.query_selector("span.text").inner_text()
             author = quote.query_selector("small.author").inner_text()
+
             print(text, "-", author)
 
             all_quotes.append([text, author])
@@ -29,22 +37,14 @@ with sync_playwright() as p:
             break
 
         next_button.click()
-        page.wait_for_timeout(2000)  # wait for next page
-
-                # === Save to existing DataStorage folder ===
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"quotes_all_pages_{timestamp}.csv"
-        
-        # Use the existing DataStorage folder
-        filepath = os.path.join("DataStorage", filename)
-        
-        with open(filepath, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["Text", "Author"])
-            writer.writeheader()
-            writer.writerows(all_quotes)
-        
-        print(f"\n Scraping finished successfully!")
-        print(f"Total quotes scraped: {len(all_quotes)}")
-        print(f"File saved: {filepath}")
+        page.wait_for_selector("div.quote")
 
     browser.close()
+
+# save CSV in DataStorage with timestamp
+with open(file_path, "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Quote", "Author"])
+    writer.writerows(all_quotes)
+
+print(f"Data saved to {file_path}")
